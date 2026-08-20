@@ -1,0 +1,36 @@
+---
+import phIcons from "@iconify-json/ph/icons.json";
+
+interface Props {
+  name: string;
+  class?: string;
+  [key: string]: any;
+}
+
+const { name, class: className = "", ...attrs } = Astro.props;
+
+let iconName = name;
+if (iconName.startsWith("ph:")) {
+  iconName = iconName.slice(3);
+}
+
+const iconData = (phIcons.icons as Record<string, any>)[iconName];
+const body = iconData?.body ?? "";
+const width = phIcons.width ?? 256;
+const height = phIcons.height ?? 256;
+---
+
+{
+  body ? (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox={`0 0 ${width} ${height}`}
+      width="1em"
+      height="1em"
+      fill="currentColor"
+      class={className}
+      set:html={body}
+      {...attrs}
+    />
+  ) : null
+}

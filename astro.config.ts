@@ -1,5 +1,4 @@
 import tailwindcss from "@tailwindcss/vite";
-import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import nimbus, { defineConfig as defineNimbusConfig } from "nimbus-docs";
 import { tableScroll } from "nimbus-docs/markdown";
@@ -34,7 +33,6 @@ export default defineConfig({
     defaultStrategy: "hover",
   },
   integrations: [
-    icon(),
     nimbus(nimbusConfig, {
       rules: {
         "nimbus/frontmatter-shape": "error",

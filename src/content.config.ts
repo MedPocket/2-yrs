@@ -2,7 +2,7 @@
 // `astro/zod` (the pattern nimbus-docs' own schema helpers document).
 import { z } from "astro/zod";
 import { defineCollection } from "astro:content";
-import { docsCollection, partialsCollection } from "nimbus-docs/content";
+import { docsCollection } from "nimbus-docs/content";
 
 export const collections = {
   docs: defineCollection(
@@ -14,5 +14,4 @@ export const collections = {
       },
     }),
   ),
-  partials: defineCollection(partialsCollection()),
 };
