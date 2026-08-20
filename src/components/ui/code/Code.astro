@@ -18,7 +18,7 @@ const themed = usesNimbusDefaultThemes
       defaultColor: false,
     }
   : rawProps;
-const userTransformers = themed.transformers ?? [];
+const userTransformers = (themed.transformers ?? []) as any;
 const props = {
   ...themed,
   transformers: defaultCodeTransformers({

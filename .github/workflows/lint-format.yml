@@ -1,4 +1,4 @@
-name: CI Check
+name: autofix.ci
 
 on:
   push:
@@ -6,32 +6,14 @@ on:
   pull_request:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   lint-format:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: "pnpm"
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Check linter & formatter
-        run: pnpm check
-
-      - name: Typecheck
-        run: pnpm typecheck
-
-      - name: Lint docs
-        run: pnpm lint:docs
+      - name: Run lint/format scripts
+        uses: area44/workflows/lint-format@93549066a46602925fc5fbd8c928e7cb01f25010 # v6.0.0
