@@ -8,7 +8,7 @@ const site =
     ? (process.env.SITE ?? "https://medpocket.github.io/2-yrs")
     : "http://localhost:4321";
 
-const base = process.env.BASE ?? "/2-yrs/";
+const base = process.env.BASE ?? "/";
 
 const nimbusConfig = defineNimbusConfig({
   site,
