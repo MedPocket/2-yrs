@@ -1,6 +1,6 @@
 # 2 Years (2-yrs)
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://medpocket.github.io/2-yrs)
+A static documentation website built with Nimbus Docs for OBGYN knowledge.
 
 ## Bắt đầu
 

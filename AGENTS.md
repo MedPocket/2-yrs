@@ -4,7 +4,7 @@ This project provides a highly professional, accurate, and structured medical kn
 
 ## Tech Stack
 
-- **Framework:** `Starlight` is a documentation website framework.
+- **Framework:** `Nimbus Docs` (`nimbus-docs`) built on top of Astro.
 - **Package Manager:** `pnpm` (workspace and dependencies).
 - **Linter & Formatter:** `oxlint` and `oxfmt`.
 
@@ -14,28 +14,22 @@ This is directory structure:
 
 ```text
 ├── .github/                   # GitHub Actions / Workflows configurations
-├── config/
-│   └── sidebar.ts             # Sidebar configuration for Starlight
 ├── public/                    # Static public assets (Logo, Favicon, etc.)
 ├── src/
 │   ├── assets/                # App assets, logos, fonts
-│   ├── components/            # Custom Astro Components
+│   ├── components/            # Custom Astro / UI Components
 │   ├── content/
 │   │   ├── docs/              # Medical documentation files (.md, .mdx)
-│   │   │   ├── san-khoa/      # Obstetrics documentation
-│   │   │   ├── phu-khoa/      # Gynecology documentation
-│   │   │   ├── ho-tro-sinh-san/# Reproductive Medicine documentation
+│   │   │   ├── san-khoa.mdx   # Obstetrics documentation
+│   │   │   ├── phu-khoa.mdx   # Gynecology documentation
+│   │   │   ├── ho-tro-sinh-san.mdx # Reproductive Medicine documentation
 │   │   │   ├── 404.mdx
 │   │   │   └── index.mdx      # Homepage of docs
-│   │   └── content.config.ts  # Schema definition for Starlight docs
-│   ├── pages/
-│   │   └── og/
-│   │       └── [...route].ts  # Dynamic OG Image generator API
-│   ├── plugins/               # Custom plugins
-│   ├── styles/
-│   │   └── globals.css        # Global CSS styles, integrated with Starlight variables
-│   └── routeData.ts           # Middleware config
-├── astro.config.ts            # Astro & Starlight configuration
+│   │   └── content.config.ts  # Schema definition for Nimbus docs
+│   ├── layouts/               # Page Layouts (DocsLayout, BaseLayout)
+│   ├── pages/                 # Dynamic Astro Pages
+│   └── styles/                # Global CSS styles
+├── astro.config.ts            # Astro & Nimbus configuration
 ├── package.json               # Package dependencies & scripts
 ├── STYLEGUIDE.md              # Medical document style guide
 └── README.md                  # Quick setup and local development guide
@@ -52,7 +46,7 @@ Please read and follow the detailed rules in [**STYLEGUIDE.md**](./STYLEGUIDE.md
 ### CLI Commands
 
 - `pnpm install` - Installs workspace dependencies.
-- `pnpm dev` (or `pnpm start`) - Starts the local development server at `http://localhost:4321`.
+- `pnpm dev` - Starts the local development server at `http://localhost:4321`.
 - `pnpm check` - Runs `oxlint` (linter) and `oxfmt` (formatter) simultaneously.
 - `pnpm build` - Performs a full production build.
 - `pnpm preview` - Local preview of the production build.

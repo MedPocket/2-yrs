@@ -1,13 +1,8 @@
-import { satteri } from "@astrojs/markdown-satteri";
-import starlight from "@astrojs/starlight";
+import tailwindcss from "@tailwindcss/vite";
+import icon from "astro-icon";
 import { defineConfig } from "astro/config";
-import starlightImageZoom from "starlight-image-zoom";
-import starlightLinksValidator from "starlight-links-validator";
-
-import { sidebar } from "./config/sidebar";
-import { satteriExternalLinks } from "./src/plugins/satteri-external-links";
-import { satteriMermaid } from "./src/plugins/satteri-mermaid";
-import { satteriReadingTime } from "./src/plugins/satteri-reading-time";
+import nimbus, { defineConfig as defineNimbusConfig } from "nimbus-docs";
+import { tableScroll } from "nimbus-docs/markdown";
 
 const site =
   process.env.NODE_ENV === "production"
@@ -18,64 +13,36 @@ let base = process.env.BASE || "/";
 if (base !== "/" && !base.startsWith("/")) base = "/" + base;
 if (base !== "/" && !base.endsWith("/")) base = base + "/";
 
+const nimbusConfig = defineNimbusConfig({
+  site,
+  title: "2 Years",
+  description: "Kiến thức sản phụ khoa",
+  locale: "vi",
+  github: "https://github.com/MedPocket/2-yrs",
+  socialImageAlt: "2 Years OBGYN documentation preview",
+});
+
 export default defineConfig({
   site,
   base,
-  markdown: {
-    syntaxHighlight: {
-      type: "shiki",
-      excludeLangs: ["mermaid"],
-    },
-    processor: satteri({
-      mdastPlugins: [satteriReadingTime],
-      hastPlugins: [satteriExternalLinks, satteriMermaid],
-    }),
+  output: "static",
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: "hover",
   },
   integrations: [
-    starlight({
-      routeMiddleware: "./src/routeData.ts",
-      title: "2 Years",
-      head: [
-        {
-          tag: "script",
-          attrs: {
-            async: true,
-            src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2837724975096238",
-            crossorigin: "anonymous",
-          },
-        },
-      ],
-      logo: {
-        src: "/src/assets/logo.png",
-        alt: "2 Years Logo",
-        replacesTitle: true,
+    icon(),
+    nimbus(nimbusConfig, {
+      rules: {
+        "nimbus/frontmatter-shape": "error",
+        "nimbus/internal-link": "error",
       },
-      defaultLocale: "root",
-      locales: {
-        root: {
-          label: "Vietnam",
-          lang: "vi",
-        },
+      markdown: {
+        hastPlugins: [tableScroll()],
       },
-      components: {
-        Sidebar: "./src/components/Sidebar.astro",
-        PageTitle: "./src/components/PageTitle.astro",
-      },
-      customCss: ["./src/styles/globals.css", "./src/styles/mermaid.css"],
-      social: [
-        {
-          icon: "github",
-          label: "GitHub",
-          href: "https://github.com/MedPocket/2-yrs",
-        },
-      ],
-      editLink: {
-        baseUrl: "https://github.com/MedPocket/2-yrs/tree/main",
-      },
-      pagination: true,
-      lastUpdated: true,
-      sidebar,
-      plugins: [starlightImageZoom(), starlightLinksValidator({ errorOnRelativeLinks: false })],
     }),
   ],
 });

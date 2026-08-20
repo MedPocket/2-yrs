@@ -1,33 +1,45 @@
 {
   "name": "@medpocket/2-yrs",
   "version": "0.1.0",
+  "private": true,
   "description": "Kiến thức sản phụ khoa",
   "author": "MedPocket",
+  "type": "module",
   "scripts": {
-    "build": "astro build",
     "dev": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
-    "start": "astro dev",
     "format": "oxfmt",
     "lint": "oxlint",
-    "check": "oxlint && oxfmt"
+    "check": "oxlint && oxfmt",
+    "typecheck": "astro check",
+    "lint:docs": "nimbus-docs lint",
+    "lint:docs:fix": "nimbus-docs lint --fix"
   },
   "dependencies": {
-    "@astrojs/markdown-satteri": "^0.3.5",
-    "@astrojs/starlight": "^0.41.7",
-    "@resvg/resvg-js": "^2.6.2",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "@iconify-json/ph": "^1.2.0",
     "astro": "^7.2.0",
+    "astro-icon": "^1.1.0",
+    "astro-og-canvas": "^0.13.0",
+    "canvaskit-wasm": "^0.41.1",
+    "clsx": "^2.1.1",
     "mermaid": "^11.16.1",
+    "nimbus-docs": "^0.5.0",
     "reading-time": "^1.5.0",
     "satori": "^0.29.0",
     "satteri": "^0.9.5",
     "sharp": "^0.35.3",
-    "starlight-image-zoom": "^0.14.2",
-    "starlight-links-validator": "^0.25.2"
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "@tailwindcss/vite": "^4.1.4",
     "oxfmt": "^0.62.0",
     "oxlint": "^1.77.0",
-    "typescript": "^7.0.2"
+    "pagefind": "^1.5.2",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3"
   }
 }
