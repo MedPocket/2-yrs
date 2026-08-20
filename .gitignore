@@ -19,6 +19,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# Nimbus docs temporary / generated cache folder
+.nimbus/
+
 # macOS-specific files
 .DS_Store
 dist/

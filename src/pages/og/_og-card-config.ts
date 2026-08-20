@@ -18,20 +18,17 @@ export const ogCardConfig = {
   ],
   border: { color: [39, 39, 42], width: 2, side: "inline-start" },
   padding: 96,
-  fonts: ["./public/fonts/Inter-Bold.ttf"],
   font: {
     title: {
       color: [250, 250, 250],
       size: 64,
       weight: "Bold",
-      families: ["Inter"],
       lineHeight: 1.1,
     },
     description: {
       color: [161, 161, 170],
       size: 32,
       weight: "Bold",
-      families: ["Inter"],
       lineHeight: 1.3,
     },
   },
