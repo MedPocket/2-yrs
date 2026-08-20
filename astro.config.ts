@@ -5,10 +5,10 @@ import { tableScroll } from "nimbus-docs/markdown";
 
 const site =
   process.env.NODE_ENV === "production"
-    ? (process.env.SITE ?? "https://2-yrs.pages.dev")
+    ? (process.env.SITE ?? "https://medpocket.github.io/2-yrs")
     : "http://localhost:4321";
 
-let base = process.env.BASE || "/";
+let base = process.env.BASE || "/2-yrs/";
 if (base !== "/" && !base.startsWith("/")) base = "/" + base;
 if (base !== "/" && !base.endsWith("/")) base = base + "/";
 
