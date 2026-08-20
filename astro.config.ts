@@ -1,0 +1,81 @@
+import { satteri } from "@astrojs/markdown-satteri";
+import starlight from "@astrojs/starlight";
+import { defineConfig } from "astro/config";
+import starlightImageZoom from "starlight-image-zoom";
+import starlightLinksValidator from "starlight-links-validator";
+
+import { sidebar } from "./config/sidebar";
+import { satteriExternalLinks } from "./src/plugins/satteri-external-links";
+import { satteriMermaid } from "./src/plugins/satteri-mermaid";
+import { satteriReadingTime } from "./src/plugins/satteri-reading-time";
+
+const site =
+  process.env.NODE_ENV === "production"
+    ? (process.env.SITE ?? "https://2-yrs.pages.dev")
+    : "http://localhost:4321";
+
+let base = process.env.BASE || "/";
+if (base !== "/" && !base.startsWith("/")) base = "/" + base;
+if (base !== "/" && !base.endsWith("/")) base = base + "/";
+
+export default defineConfig({
+  site,
+  base,
+  markdown: {
+    syntaxHighlight: {
+      type: "shiki",
+      excludeLangs: ["mermaid"],
+    },
+    processor: satteri({
+      mdastPlugins: [satteriReadingTime],
+      hastPlugins: [satteriExternalLinks, satteriMermaid],
+    }),
+  },
+  integrations: [
+    starlight({
+      routeMiddleware: "./src/routeData.ts",
+      title: "2 Years",
+      head: [
+        {
+          tag: "script",
+          attrs: {
+            async: true,
+            src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2837724975096238",
+            crossorigin: "anonymous",
+          },
+        },
+      ],
+      logo: {
+        src: "/src/assets/logo.png",
+        alt: "2 Years Logo",
+        replacesTitle: true,
+      },
+      defaultLocale: "root",
+      locales: {
+        root: {
+          label: "Vietnam",
+          lang: "vi",
+        },
+      },
+      components: {
+        Sidebar: "./src/components/Sidebar.astro",
+        PageTitle: "./src/components/PageTitle.astro",
+      },
+      customCss: ["./src/styles/globals.css", "./src/styles/mermaid.css"],
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/MedPocket/2-yrs",
+        },
+      ],
+      editLink: {
+        baseUrl: "https://github.com/MedPocket/2-yrs/tree/main",
+      },
+      pagination: true,
+      lastUpdated: true,
+      sidebar,
+      plugins: [starlightImageZoom(), starlightLinksValidator({ errorOnRelativeLinks: false })],
+    }),
+  ],
+});
