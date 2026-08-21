@@ -1,17 +1,14 @@
 import tailwindcss from "@tailwindcss/vite";
-import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import nimbus, { defineConfig as defineNimbusConfig } from "nimbus-docs";
 import { tableScroll } from "nimbus-docs/markdown";
 
 const site =
   process.env.NODE_ENV === "production"
-    ? (process.env.SITE ?? "https://2-yrs.pages.dev")
+    ? (process.env.SITE ?? "https://medpocket.github.io/2-yrs")
     : "http://localhost:4321";
 
-let base = process.env.BASE || "/";
-if (base !== "/" && !base.startsWith("/")) base = "/" + base;
-if (base !== "/" && !base.endsWith("/")) base = base + "/";
+const base = process.env.BASE ?? "/";
 
 const nimbusConfig = defineNimbusConfig({
   site,
@@ -34,7 +31,6 @@ export default defineConfig({
     defaultStrategy: "hover",
   },
   integrations: [
-    icon(),
     nimbus(nimbusConfig, {
       rules: {
         "nimbus/frontmatter-shape": "error",
