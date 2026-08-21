@@ -16,12 +16,11 @@ const nimbusConfig = defineNimbusConfig({
   description: "Kiến thức sản phụ khoa",
   locale: "vi",
   github: "https://github.com/MedPocket/2-yrs",
-  socialImageAlt: "2 Years OBGYN documentation preview",
+  socialImageAlt: "2 Years by MedPocket",
   search: { provider: "pagefind" },
 });
 
 export default defineConfig({
-  site,
   base,
   output: "static",
   vite: {
