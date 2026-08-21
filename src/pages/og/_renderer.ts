@@ -2,7 +2,12 @@ import { Resvg } from "@resvg/resvg-js";
 import { readFile } from "node:fs/promises";
 import satori from "satori";
 
-const fontBuffer = await readFile("./src/assets/fonts/DejaVuSans.ttf");
+const [interViet400, interViet700, interLatin400, interLatin700] = await Promise.all([
+  readFile("./node_modules/@fontsource/inter/files/inter-vietnamese-400-normal.woff"),
+  readFile("./node_modules/@fontsource/inter/files/inter-vietnamese-700-normal.woff"),
+  readFile("./node_modules/@fontsource/inter/files/inter-latin-400-normal.woff"),
+  readFile("./node_modules/@fontsource/inter/files/inter-latin-700-normal.woff"),
+]);
 
 const truncate = (s: string, max: number) =>
   s.length <= max ? s : s.slice(0, max - 1).trimEnd() + "…";
@@ -27,7 +32,7 @@ export async function renderOgCard(input: {
           backgroundColor: "#0F0F0F",
           color: "#F5F5F5",
           padding: "70px 60px",
-          fontFamily: "DejaVu Sans, system-ui, sans-serif",
+          fontFamily: "Inter, system-ui, sans-serif",
           boxSizing: "border-box",
         },
         children: [
@@ -92,12 +97,10 @@ export async function renderOgCard(input: {
       width: 1200,
       height: 630,
       fonts: [
-        {
-          name: "DejaVu Sans",
-          data: fontBuffer,
-          weight: 400,
-          style: "normal",
-        },
+        { name: "Inter", data: interViet400, weight: 400, style: "normal" },
+        { name: "Inter", data: interViet700, weight: 700, style: "normal" },
+        { name: "Inter", data: interLatin400, weight: 400, style: "normal" },
+        { name: "Inter", data: interLatin700, weight: 700, style: "normal" },
       ],
     },
   );
