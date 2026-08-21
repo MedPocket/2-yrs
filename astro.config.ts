@@ -14,7 +14,7 @@ const nimbusConfig = defineNimbusConfig({
   site,
   title: "2 Years",
   description: "Kiến thức sản phụ khoa",
-  locale: "vi",
+  locale: "en",
   github: "https://github.com/MedPocket/2-yrs",
   socialImageAlt: "2 Years by MedPocket",
   search: { provider: "pagefind" },
