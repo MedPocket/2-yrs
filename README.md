@@ -4,7 +4,7 @@
 
 A static documentation website built with [Nimbus Docs](https://nimbus-docs.com) for OB-GYN knowledge.
 
-## Bắt đầu
+## Getting Started
 
 ```sh
 pnpm install
