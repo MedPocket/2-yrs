@@ -2,12 +2,28 @@ import { Resvg } from "@resvg/resvg-js";
 import { readFile } from "node:fs/promises";
 import satori from "satori";
 
-const [interViet400, interViet700, interLatin400, interLatin700] = await Promise.all([
+const [interViet400, interViet700, interLatin400, interLatin700, cloudBuffer] = await Promise.all([
   readFile("./public/fonts/inter-vietnamese-400-normal.ttf"),
   readFile("./public/fonts/inter-vietnamese-700-normal.ttf"),
   readFile("./public/fonts/inter-latin-400-normal.ttf"),
   readFile("./public/fonts/inter-latin-700-normal.ttf"),
+  readFile("./public/bg-cloud.png"),
 ]);
+
+const cloudInkSvg =
+  '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="690" height="425">' +
+  '<filter id="ink" color-interpolation-filters="sRGB">' +
+  '<feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" result="opaque"/>' +
+  '<feColorMatrix in="opaque" type="luminanceToAlpha" result="luma"/>' +
+  '<feComponentTransfer in="luma" result="mask"><feFuncA type="linear" slope="-1.06" intercept="1.05"/></feComponentTransfer>' +
+  '<feFlood flood-color="#F5F5F5" result="ink"/>' +
+  '<feComposite in="ink" in2="mask" operator="in"/>' +
+  "</filter>" +
+  `<image xlink:href="data:image/png;base64,${cloudBuffer.toString("base64")}" width="690" height="425" filter="url(#ink)"/>` +
+  "</svg>";
+
+const cloudDarkPng = new Resvg(cloudInkSvg).render().asPng();
+const cloudDataUri = `data:image/png;base64,${Buffer.from(cloudDarkPng).toString("base64")}`;
 
 const truncate = (s: string, max: number) =>
   s.length <= max ? s : s.slice(0, max - 1).trimEnd() + "…";
@@ -35,6 +51,20 @@ export async function renderOgCard(input: {
           overflow: "hidden",
         },
         children: [
+          {
+            type: "img",
+            props: {
+              src: cloudDataUri,
+              alt: "",
+              width: 690,
+              height: 425,
+              style: {
+                position: "absolute",
+                top: 0,
+                right: 0,
+              },
+            },
+          },
           {
             type: "div",
             props: {
