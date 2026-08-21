@@ -1,25 +1,25 @@
-import { OGImageRoute } from "astro-og-canvas";
+import type { APIRoute, GetStaticPaths } from "astro";
+
 import { getCollection } from "astro:content";
 
-import { ogCardConfig } from "./_og-card-config";
+import { renderOgCard } from "./_renderer";
 
-const entries = await getCollection("docs", (entry) => !entry.data.draft);
+type OgProps = { title: string; description: string };
 
-const pages = Object.fromEntries(
-  entries.map((entry) => [
-    entry.id,
-    {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const entries = await getCollection("docs", (e) => !e.data.draft);
+  return entries.map((entry) => ({
+    params: { slug: `${entry.id}.png` },
+    props: {
       title: entry.data.title,
       description: entry.data.description ?? "",
-    },
-  ]),
-);
+    } satisfies OgProps,
+  }));
+};
 
-export const { getStaticPaths, GET } = await OGImageRoute({
-  pages,
-  getImageOptions: (_path, page) => ({
-    title: page.title,
-    description: page.description,
-    ...ogCardConfig,
-  }),
-});
+export const GET: APIRoute = async ({ props }) => {
+  const png = await renderOgCard(props as OgProps);
+  return new Response(png, {
+    headers: { "Content-Type": "image/png" },
+  });
+};

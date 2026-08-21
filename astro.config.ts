@@ -17,6 +17,7 @@ const nimbusConfig = defineNimbusConfig({
   locale: "vi",
   github: "https://github.com/MedPocket/2-yrs",
   socialImageAlt: "2 Years OBGYN documentation preview",
+  search: { provider: "pagefind" },
 });
 
 export default defineConfig({
