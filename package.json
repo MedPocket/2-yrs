@@ -36,8 +36,5 @@
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3"
   },
-  "overrides": {
-    "@vercel/detect-agent": "1.2.4"
-  },
   "packageManager": "pnpm@11.24.0"
 }
