@@ -1,8 +1,8 @@
+import { docsCollection, partialsCollection } from "@cloudflare/nimbus-docs/content";
 // `z` re-exported from `astro:content` is deprecated; import it from
 // `astro/zod` (the pattern nimbus-docs' own schema helpers document).
 import { z } from "astro/zod";
 import { defineCollection } from "astro:content";
-import { docsCollection, partialsCollection } from "nimbus-docs/content";
 
 export const collections = {
   docs: defineCollection(

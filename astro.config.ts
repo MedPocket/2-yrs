@@ -1,17 +1,12 @@
+import nimbus, { defineConfig as defineNimbusConfig } from "@cloudflare/nimbus-docs";
+import { tableScroll } from "@cloudflare/nimbus-docs/markdown";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
-import nimbus, { defineConfig as defineNimbusConfig } from "nimbus-docs";
-import { tableScroll } from "nimbus-docs/markdown";
-
-const site =
-  process.env.NODE_ENV === "production"
-    ? (process.env.SITE ?? "https://medpocket.github.io/2-yrs")
-    : "http://localhost:4321";
 
 const base = process.env.BASE ?? "/";
 
 const nimbusConfig = defineNimbusConfig({
-  site,
+  site: process.env.SITE || process.env.URL || "https://medpocket.github.io/2-yrs",
   title: "2 Years",
   description: "Kiến thức sản phụ khoa",
   locale: "en",
@@ -21,6 +16,7 @@ const nimbusConfig = defineNimbusConfig({
 });
 
 export default defineConfig({
+  site: nimbusConfig.site,
   base,
   output: "static",
   vite: {
