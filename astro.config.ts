@@ -6,7 +6,7 @@ import { defineConfig } from "astro/config";
 const base = process.env.BASE ?? "/";
 
 const nimbusConfig = defineNimbusConfig({
-  site: "https://medpocket.github.io/2-yrs",
+  site: process.env.SITE || process.env.URL || "https://medpocket.github.io/2-yrs",
   title: "2 Years",
   description: "Kiến thức sản phụ khoa",
   locale: "en",
@@ -16,7 +16,7 @@ const nimbusConfig = defineNimbusConfig({
 });
 
 export default defineConfig({
-  site: "https://medpocket.github.io/2-yrs",
+  site: nimbusConfig.site,
   base,
   output: "static",
   vite: {
