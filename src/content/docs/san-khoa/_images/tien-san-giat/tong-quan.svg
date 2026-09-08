@@ -1,39 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" style="background-color: #f8fafc; font-family: system-ui, -apple-system, sans-serif;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" style="background-color: #f8fafc; font-family: system-ui, -apple-system, sans-serif;">
   <!-- Title Header -->
-  <rect x="0" y="0" width="800" height="60" fill="#0f172a"/>
-  <text x="400" y="38" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">TỔNG QUAN VỀ TIỀN SẢN GIẬT (PREECLAMPSIA)</text>
+  <rect x="0" y="0" width="800" height="50" fill="#0f172a"/>
+  <text x="400" y="32" fill="#ffffff" font-size="18" font-weight="bold" text-anchor="middle">TỔNG QUAN TIỀN SẢN GIẬT (PREECLAMPSIA)</text>
 
-  <!-- Central Definition Box -->
-  <rect x="40" y="80" width="720" height="90" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
-  <text x="60" y="108" fill="#1e3a8a" font-size="16" font-weight="bold">Định nghĩa hiện đại (FIGO / ACOG):</text>
-  <text x="60" y="132" fill="#334155" font-size="14">Tăng huyết áp mới xuất hiện từ tuần thứ 20 thai kỳ (Huyết áp tâm thu ≥ 140 mmHg và/hoặc tâm trương ≥ 90 mmHg)</text>
-  <text x="60" y="154" fill="#334155" font-size="14">kèm theo Protein niệu (≥ 300 mg/24h) HOẶC Rối loạn chức năng đa cơ quan ở người mẹ/thai nhi.</text>
+  <!-- Left Box: Definition -->
+  <rect x="30" y="70" width="350" height="350" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="30" y="70" width="350" height="40" rx="8" fill="#dbeafe"/>
+  <text x="205" y="96" fill="#1e40af" font-size="16" font-weight="bold" text-anchor="middle">ĐỊNH NGHĨA LÂM SÀNG (FIGO / ACOG)</text>
 
-  <!-- Maternal Consequences Card -->
-  <rect x="40" y="190" width="345" height="230" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
-  <rect x="40" y="190" width="345" height="40" rx="8" fill="#fee2e2"/>
-  <text x="212" y="216" fill="#991b1b" font-size="16" font-weight="bold" text-anchor="middle">Biến chứng ở người mẹ (Maternal)</text>
+  <g transform="translate(45, 125)">
+    <text x="0" y="15" fill="#0f172a" font-size="14" font-weight="bold">• Tăng huyết áp mới xuất hiện (Sau 20 tuần):</text>
+    <text x="15" y="35" fill="#334155" font-size="13">HATT ≥ 140 mmHg và/hoặc HATTr ≥ 90 mmHg</text>
+    <text x="15" y="52" fill="#64748b" font-size="12">(Đo 2 lần cách nhau ít nhất 4 giờ)</text>
+  </g>
 
-  <text x="60" y="252" fill="#7f1d1d" font-size="13" font-weight="bold">• Cấp tính:</text>
-  <text x="80" y="272" fill="#334155" font-size="13">- Sản giật (Eclampsia), Xuất huyết não</text>
-  <text x="80" y="292" fill="#334155" font-size="13">- Hội chứng HELLP, Suy gan, Suy thận cấp</text>
-  <text x="80" y="312" fill="#334155" font-size="13">- Phù phổi cấp, Rau cài răng lược / Rau bong non</text>
+  <g transform="translate(45, 200)">
+    <text x="0" y="15" fill="#0f172a" font-size="14" font-weight="bold">• KÈM THEO ít nhất 1 trong các dấu hiệu:</text>
+    <text x="15" y="35" fill="#2563eb" font-size="13" font-weight="bold">1. Protein niệu mới xuất hiện:</text>
+    <text x="30" y="52" fill="#334155" font-size="12">≥ 300 mg/24h hoặc UPCR ≥ 0.3 mg/mg</text>
+    <text x="15" y="75" fill="#dc2626" font-size="13" font-weight="bold">2. Rối loạn chức năng cơ quan mẹ:</text>
+    <text x="30" y="92" fill="#334155" font-size="12">- Giảm tiểu cầu (&lt; 100 000/µL)</text>
+    <text x="30" y="110" fill="#334155" font-size="12">- Suy thận (Creatinine &gt; 1.1 mg/dL)</text>
+    <text x="30" y="128" fill="#334155" font-size="12">- Tăng men gan (AST/ALT gấp 2 lần)</text>
+    <text x="30" y="146" fill="#334155" font-size="12">- Biến chứng thần kinh / Phù phổi cấp</text>
+    <text x="15" y="169" fill="#d97706" font-size="13" font-weight="bold">3. Rối loạn chức năng bánh nhau / Thai:</text>
+    <text x="30" y="186" fill="#334155" font-size="12">Thai chậm phát triển trong tử cung (FGR)</text>
+  </g>
 
-  <text x="60" y="340" fill="#7f1d1d" font-size="13" font-weight="bold">• Lâu dài (Khuyến cáo AHA):</text>
-  <text x="80" y="360" fill="#334155" font-size="13">- Tăng nguy cơ bệnh tim mạch (x2 - x4 lần)</text>
-  <text x="80" y="380" fill="#334155" font-size="13">- Tăng huyết áp mạn, Đột quỵ, Suy thận mạn</text>
+  <!-- Right Box: Organ Impact -->
+  <rect x="420" y="70" width="350" height="350" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="420" y="70" width="350" height="40" rx="8" fill="#fee2e2"/>
+  <text x="595" y="96" fill="#991b1b" font-size="16" font-weight="bold" text-anchor="middle">ẢNH HƯỞNG ĐA CƠ QUAN</text>
 
-  <!-- Fetal Consequences Card -->
-  <rect x="415" y="190" width="345" height="230" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
-  <rect x="415" y="190" width="345" height="40" rx="8" fill="#fef3c7"/>
-  <text x="587" y="216" fill="#92400e" font-size="16" font-weight="bold" text-anchor="middle">Biến chứng ở thai nhi (Fetal / Neonatal)</text>
+  <g transform="translate(435, 125)">
+    <!-- CNS -->
+    <rect x="0" y="0" width="320" height="60" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="12" y="20" fill="#991b1b" font-size="13" font-weight="bold">Hệ Thần Kinh Trung Ương:</text>
+    <text x="12" y="40" fill="#334155" font-size="12">Đau đầu, rối loạn thị giác, Sản giật, Phù não, Đột quỵ</text>
 
-  <text x="435" y="252" fill="#78350f" font-size="13" font-weight="bold">• Hậu quả do suy bánh nhau:</text>
-  <text x="455" y="272" fill="#334155" font-size="13">- Thai chậm phát triển trong tử cung (FGR/IUGR)</text>
-  <text x="455" y="292" fill="#334155" font-size="13">- Thiểu ắc, Thâm hụt oxy &amp; dinh dưỡng thai</text>
-  <text x="455" y="312" fill="#334155" font-size="13">- Mất tim thai / Thai chết lưu trong tử cung</text>
+    <!-- Cardiovascular -->
+    <rect x="0" y="70" width="320" height="60" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="12" y="20" fill="#991b1b" font-size="13" font-weight="bold">Tim Mạch &amp; Phổi:</text>
+    <text x="12" y="40" fill="#334155" font-size="12">Co mạch hệ thống, Tăng sức cản ngoại vi, Phù phổi cấp</text>
 
-  <text x="435" y="340" fill="#78350f" font-size="13" font-weight="bold">• Hậu quả do sinh mót / Sinh non:</text>
-  <text x="455" y="360" fill="#334155" font-size="13">- Hội chứng suy hô hấp cấp (RDS)</text>
-  <text x="455" y="380" fill="#334155" font-size="13">- Tử vong sơ sinh, Di chứng thần kinh lâu dài</text>
+    <!-- Renal & Hepatic -->
+    <rect x="0" y="140" width="320" height="60" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="12" y="20" fill="#991b1b" font-size="13" font-weight="bold">Thận &amp; Gan:</text>
+    <text x="12" y="40" fill="#334155" font-size="12">Bệnh cầu thận nội mạc, Hội chứng HELLP, Hoại tử gan</text>
+
+    <!-- Fetal -->
+    <rect x="0" y="210" width="320" height="60" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="12" y="20" fill="#d97706" font-size="13" font-weight="bold">Thai Nhi &amp; Bánh Nhau:</text>
+    <text x="12" y="40" fill="#334155" font-size="12">Thiếu máu bánh nhau, FGR, Sau bong non, Thai chết lưu</text>
+  </g>
 </svg>
