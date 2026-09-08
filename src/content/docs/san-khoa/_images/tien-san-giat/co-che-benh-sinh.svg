@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%" style="background-color: #f8fafc; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="50" fill="#0f172a"/>
+  <text x="400" y="32" fill="#ffffff" font-size="18" font-weight="bold" text-anchor="middle">MÔ HÌNH 2 GIAI ĐOẠN TRONG CƠ CHẾ BỆNH SINH TIỀN SẢN GIẬT</text>
+
+  <!-- Stage 1 Box -->
+  <rect x="30" y="70" width="350" height="200" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <rect x="30" y="70" width="350" height="35" rx="8" fill="#e0f2fe"/>
+  <text x="205" y="93" fill="#0369a1" font-size="15" font-weight="bold" text-anchor="middle">GIAI ĐOẠN 1: BÁNH NHAU (Placental Stage)</text>
+  <text x="45" y="125" fill="#0f172a" font-size="13" font-weight="bold">• Khuyết tật xâm nhập của tế bào nuôi:</text>
+  <text x="55" y="145" fill="#334155" font-size="12">- Nguyên bào nuôi không tái cấu trúc động mạch xoắn</text>
+  <text x="55" y="163" fill="#334155" font-size="12">- Động mạch xoắn giữ lòng hẹp, kháng lực cao</text>
+  <text x="45" y="190" fill="#0f172a" font-size="13" font-weight="bold">• Hậu quả sinh học bánh nhau:</text>
+  <text x="55" y="210" fill="#334155" font-size="12">- Tăng tưới máu - thiếu máu cục bộ bánh nhau</text>
+  <text x="55" y="228" fill="#334155" font-size="12">- Giảm oxy (Hypoxia) &amp; Stress oxy hóa</text>
+  <text x="55" y="246" fill="#334155" font-size="12">- Giải phóng chất kháng mạch vào máu mẹ</text>
+
+  <!-- Arrow Stage 1 to Stage 2 -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#dc2626" />
+    </marker>
+  </defs>
+  <line x1="380" y1="170" x2="415" y1="170" stroke="#dc2626" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Molecular Mediators Box -->
+  <rect x="425" y="70" width="345" height="200" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="425" y="70" width="345" height="35" rx="8" fill="#fee2e2"/>
+  <text x="597" y="93" fill="#991b1b" font-size="15" font-weight="bold" text-anchor="middle">MẤT CÂN BẰNG YẾU TỐ MẠCH MÁU</text>
+  <text x="440" y="125" fill="#991b1b" font-size="13" font-weight="bold">↑ Yếu tố kháng mạch (Anti-angiogenic):</text>
+  <text x="455" y="145" fill="#334155" font-size="12">• sFlt-1 (Soluble fms-like tyrosine kinase-1)</text>
+  <text x="455" y="163" fill="#334155" font-size="12">• sEng (Soluble Endoglin)</text>
+  <text x="440" y="190" fill="#166534" font-size="13" font-weight="bold">↓ Yếu tố tạo mạch (Pro-angiogenic):</text>
+  <text x="455" y="210" fill="#334155" font-size="12">• PlGF (Placental Growth Factor)</text>
+  <text x="455" y="228" fill="#334155" font-size="12">• VEGF (Vascular Endothelial Growth Factor)</text>
+  <text x="440" y="255" fill="#dc2626" font-size="12" font-weight="bold">⇒ Tỷ lệ sFlt-1/PlGF tăng cao đột biến trong máu mẹ</text>
+
+  <!-- Arrow down to Stage 2 -->
+  <line x1="400" y1="280" x2="400" y2="305" stroke="#dc2626" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Stage 2 Box -->
+  <rect x="30" y="310" width="740" height="150" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="30" y="310" width="740" height="35" rx="8" fill="#f3e8ff"/>
+  <text x="400" y="333" fill="#6b21a8" font-size="15" font-weight="bold" text-anchor="middle">GIAI ĐOẠN 2: HỘI CHỨNG ĐA CƠ QUAN Ở MẸ (Maternal Systemic Stage)</text>
+
+  <g transform="translate(45, 360)">
+    <rect x="0" y="0" width="160" height="85" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="80" y="20" fill="#0f172a" font-size="12" font-weight="bold" text-anchor="middle">Tế bào nội mạc</text>
+    <text x="80" y="40" fill="#334155" font-size="11" text-anchor="middle">Tổn thương toàn thân</text>
+    <text x="80" y="58" fill="#334155" font-size="11" text-anchor="middle">Giảm NO, Prostacyclin</text>
+    <text x="80" y="74" fill="#dc2626" font-size="11" text-anchor="middle">Co mạch &amp; Tăng HA</text>
+  </g>
+
+  <g transform="translate(225, 360)">
+    <rect x="0" y="0" width="160" height="85" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="80" y="20" fill="#0f172a" font-size="12" font-weight="bold" text-anchor="middle">Thận (Renal)</text>
+    <text x="80" y="40" fill="#334155" font-size="11" text-anchor="middle">Bệnh cầu thận nội mạc</text>
+    <text x="80" y="58" fill="#334155" font-size="11" text-anchor="middle">Protein niệu</text>
+    <text x="80" y="74" fill="#dc2626" font-size="11" text-anchor="middle">Giảm Creatinine Cl.</text>
+  </g>
+
+  <g transform="translate(405, 360)">
+    <rect x="0" y="0" width="160" height="85" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="80" y="20" fill="#0f172a" font-size="12" font-weight="bold" text-anchor="middle">Gan &amp; Máu</text>
+    <text x="80" y="40" fill="#334155" font-size="11" text-anchor="middle">Tăng men gan (AST/ALT)</text>
+    <text x="80" y="58" fill="#334155" font-size="11" text-anchor="middle">Giảm tiểu cầu</text>
+    <text x="80" y="74" fill="#dc2626" font-size="11" text-anchor="middle">Hội chứng HELLP</text>
+  </g>
+
+  <g transform="translate(585, 360)">
+    <rect x="0" y="0" width="160" height="85" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="80" y="20" fill="#0f172a" font-size="12" font-weight="bold" text-anchor="middle">Thần kinh &amp; Phổi</text>
+    <text x="80" y="40" fill="#334155" font-size="11" text-anchor="middle">Phù não, Đau đầu</text>
+    <text x="80" y="58" fill="#334155" font-size="11" text-anchor="middle">Rối loạn thị giác</text>
+    <text x="80" y="74" fill="#dc2626" font-size="11" text-anchor="middle">Sản giật / Phù phổi</text>
+  </g>
+</svg>

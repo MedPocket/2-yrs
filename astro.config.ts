@@ -1,7 +1,7 @@
 import nimbus, { defineConfig as defineNimbusConfig } from "@cloudflare/nimbus-docs";
 import { tableScroll } from "@cloudflare/nimbus-docs/markdown";
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 
 const base = process.env.BASE ?? "/";
 
@@ -19,6 +19,9 @@ export default defineConfig({
   site: nimbusConfig.site,
   base,
   output: "static",
+  image: {
+    service: passthroughImageService(),
+  },
   vite: {
     plugins: [tailwindcss()],
   },

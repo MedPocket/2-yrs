@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%" style="background-color: #f8fafc; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="50" fill="#0f172a"/>
+  <text x="400" y="32" fill="#ffffff" font-size="18" font-weight="bold" text-anchor="middle">THUẬT TOÁN ĐIỀU TRỊ VÀ QUẢN LÝ LÂM SÀNG TIỀN SẢN GIẬT</text>
+
+  <!-- Box 1: Antihypertensive Therapy -->
+  <rect x="20" y="70" width="370" height="200" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="20" y="70" width="370" height="35" rx="8" fill="#dbeafe"/>
+  <text x="205" y="93" fill="#1e40af" font-size="14" font-weight="bold" text-anchor="middle">1. KIỂM SOÁT HUYẾT ÁP (Antihypertensives)</text>
+
+  <text x="35" y="123" fill="#0f172a" font-size="12" font-weight="bold">• Chỉ định hạ áp khẩn cấp:</text>
+  <text x="180" y="123" fill="#dc2626" font-size="12" font-weight="bold">HA TThu ≥ 160 hoặc TTrương ≥ 110 mmHg</text>
+
+  <text x="35" y="145" fill="#0f172a" font-size="12" font-weight="bold">• Mục tiêu điều trị:</text>
+  <text x="155" y="145" fill="#166534" font-size="12">Duy trì HA TThu 130 - 150 / TTrương 80 - 100 mmHg</text>
+
+  <text x="35" y="170" fill="#0f172a" font-size="12" font-weight="bold">• Thuốc an toàn khuyên dùng:</text>
+  <text x="45" y="188" fill="#334155" font-size="12">- Labetalol (TM / Uống)</text>
+  <text x="210" y="188" fill="#334155" font-size="12">- Nifedipin tác dụng kéo dài (Uống)</text>
+  <text x="45" y="206" fill="#334155" font-size="12">- Hydralazine (TM)</text>
+  <text x="210" y="206" fill="#334155" font-size="12">- Methyldopa (Uống)</text>
+
+  <text x="35" y="232" fill="#991b1b" font-size="12" font-weight="bold">• CHỐNG CHỈ ĐỊNH ABSOLUTE:</text>
+  <text x="45" y="250" fill="#991b1b" font-size="12">Chẹn men chuyển (ACEi), Chẹn thụ thể (ARB), Chẹn Renin trực tiếp</text>
+
+  <!-- Box 2: MgSO4 Seizure Prophylaxis -->
+  <rect x="410" y="70" width="370" height="200" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
+  <rect x="410" y="70" width="370" height="35" rx="8" fill="#f3e8ff"/>
+  <text x="595" y="93" fill="#6b21a8" font-size="14" font-weight="bold" text-anchor="middle">2. DỰ PHÒNG CO GIẬT BẰNG MAGNESIUM SULFATE</text>
+
+  <text x="425" y="123" fill="#0f172a" font-size="12" font-weight="bold">• Chỉ định:</text>
+  <text x="490" y="123" fill="#6b21a8" font-size="12" font-weight="bold">TSG nặng / Sản giật / Có dấu hiệu thần kinh</text>
+
+  <text x="425" y="145" fill="#0f172a" font-size="12" font-weight="bold">• Phác đồ tĩnh mạch (IV Protocol):</text>
+  <text x="435" y="165" fill="#334155" font-size="12">- Liều tấn công: 4 - 6 g MgSO₄ 20% truyền TM trong 15 - 20 phút</text>
+  <text x="435" y="183" fill="#334155" font-size="12">- Liều duy trì: Truyền TM liên tục 1 - 2 g/giờ trong 24 giờ sau sinh</text>
+
+  <text x="425" y="208" fill="#0f172a" font-size="12" font-weight="bold">• Tiêu chuẩn theo dõi ngộ độc (Bắt buộc):</text>
+  <text x="435" y="226" fill="#334155" font-size="12">1. Phản xạ gân xương bánh chè còn | 2. Nhịp thở ≥ 12 lần/phút</text>
+  <text x="435" y="244" fill="#334155" font-size="12">3. Nước tiểu ≥ 30 mL/giờ | <tspan fill="#dc2626" font-weight="bold">Thuốc giải độc: Calcium Gluconate 1g IV</tspan></text>
+
+  <!-- Box 3: Delivery Timing by Gestational Age -->
+  <rect x="20" y="285" width="760" height="180" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="20" y="285" width="760" height="35" rx="8" fill="#fee2e2"/>
+  <text x="400" y="308" fill="#991b1b" font-size="15" font-weight="bold" text-anchor="middle">3. QUYẾT ĐỊNH THỜI ĐIỂM CHẤM DỨT THAI KỲ (Definitive Delivery)</text>
+
+  <g transform="translate(35, 330)">
+    <rect x="0" y="0" width="170" height="120" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="85" y="20" fill="#991b1b" font-size="12" font-weight="bold" text-anchor="middle">Thai &lt; 24 tuần</text>
+    <text x="10" y="42" fill="#334155" font-size="11">• Tiên lượng thai cực kém.</text>
+    <text x="10" y="60" fill="#334155" font-size="11">• Ưu tiên bảo vệ mẹ.</text>
+    <text x="10" y="78" fill="#334155" font-size="11">• Tư vấn chấm dứt thai kỳ</text>
+    <text x="10" y="96" fill="#334155" font-size="11">sau khi chấm dứt cấp cứu.</text>
+  </g>
+
+  <g transform="translate(220, 330)">
+    <rect x="0" y="0" width="170" height="120" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="85" y="20" fill="#d97706" font-size="12" font-weight="bold" text-anchor="middle">Thai 24 - 33⁺⁶ tuần</text>
+    <text x="10" y="42" fill="#334155" font-size="11">• TSG nhẹ: Quản lý bảo tồn.</text>
+    <text x="10" y="60" fill="#334155" font-size="11">• TSG nặng: Tiêm Corticoid</text>
+    <text x="10" y="78" fill="#334155" font-size="11">trưởng thành phổi 48h,</text>
+    <text x="10" y="96" fill="#334155" font-size="11">theo dõi sát tại tuyến cuối.</text>
+  </g>
+
+  <g transform="translate(405, 330)">
+    <rect x="0" y="0" width="170" height="120" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="85" y="20" fill="#2563eb" font-size="12" font-weight="bold" text-anchor="middle">Thai 34 - 36⁺⁶ tuần</text>
+    <text x="10" y="42" fill="#334155" font-size="11">• TSG không dấu hiệu nặng:</text>
+    <text x="10" y="60" fill="#334155" font-size="11">Theo dõi đến 37 tuần.</text>
+    <text x="10" y="78" fill="#334155" font-size="11">• TSG có dấu hiệu nặng:</text>
+    <text x="10" y="96" fill="#334155" font-size="11">Chỉ định chấm dứt thai kỳ.</text>
+  </g>
+
+  <g transform="translate(590, 330)">
+    <rect x="0" y="0" width="170" height="120" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="85" y="20" fill="#166534" font-size="12" font-weight="bold" text-anchor="middle">Thai ≥ 37⁺⁰ tuần</text>
+    <text x="10" y="42" fill="#334155" font-size="11">• Tất cả các trường hợp</text>
+    <text x="10" y="60" fill="#334155" font-size="11">Tiền sản giật (kể cả nhẹ):</text>
+    <text x="10" y="78" fill="#166534" font-size="11" font-weight="bold">CHỈ ĐỊNH CHẤM DỨT</text>
+    <text x="10" y="96" fill="#166534" font-size="11" font-weight="bold">THAI KỲ CHỦ ĐỘNG.</text>
+  </g>
+</svg>
