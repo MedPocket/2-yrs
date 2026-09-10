@@ -61,7 +61,7 @@ const llmsUrl = Astro.site
           }
         };
 
-        const resolveMode = () => readPref() ?? (media.matches ? "dark" : "light");
+        const resolveMode = () => readPref() ?? "light";
 
         const applyTheme = () => {
           const root = document.documentElement;
