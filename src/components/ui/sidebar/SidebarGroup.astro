@@ -93,7 +93,7 @@ const caretClass =
       data-nb-sidebar-group-label
     >
       <a
-        href={withBase(indexHref, import.meta.env.BASE || import.meta.env.BASE_URL || "/")}
+        href={withBase(indexHref, import.meta.env.BASE ?? "/")}
         aria-current={indexIsCurrent ? "page" : undefined}
         target={indexIsExternal ? "_blank" : undefined}
         rel={indexIsExternal ? "noopener" : undefined}
