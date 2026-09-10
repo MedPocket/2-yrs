@@ -5,7 +5,7 @@ import { LinkButton } from "./ui/link-button";
 import { ThemeToggle } from "./ui/theme-toggle";
 import { SearchTrigger } from "./ui/search";
 import { config } from "virtual:nimbus/config";
-import { getSidebarSections } from "@cloudflare/nimbus-docs";
+import { getSidebarSections, withBase } from "@cloudflare/nimbus-docs";
 
 interface Props {
   /** Astro collection id for the current page, forwarded from DocsLayout. */
@@ -46,7 +46,7 @@ const showSections = sections.length >= 2;
         />
       )}
 
-      <a href="/" class="group">
+      <a href={withBase("/", import.meta.env.BASE_URL)} class="group">
         <span class="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">
           {config.title}
         </span>
