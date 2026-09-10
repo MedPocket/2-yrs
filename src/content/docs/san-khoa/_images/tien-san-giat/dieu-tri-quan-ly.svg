@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" style="background-color: #f8fafc; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="50" fill="#0f172a"/>
+  <text x="400" y="32" fill="#ffffff" font-size="18" font-weight="bold" text-anchor="middle">THUẬT TOÁN ĐIỀU TRỊ VÀ QUẢN LÝ TIỀN SẢN GIẬT LÂM SÀNG</text>
+
+  <!-- Section 1: BP Control -->
+  <rect x="20" y="70" width="240" height="390" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="20" y="70" width="240" height="35" rx="8" fill="#dbeafe"/>
+  <text x="140" y="93" fill="#1e40af" font-size="14" font-weight="bold" text-anchor="middle">1. KIỂM SOÁT HUYẾT ÁP</text>
+
+  <g transform="translate(30, 115)">
+    <text x="0" y="15" fill="#dc2626" font-size="12" font-weight="bold">Chỉ định cấp cứu (Trong 30 - 60’):</text>
+    <text x="0" y="32" fill="#0f172a" font-size="12" font-weight="bold">HATT ≥ 160 hoặc HATTr ≥ 110 mmHg</text>
+
+    <text x="0" y="60" fill="#166534" font-size="12" font-weight="bold">Mục tiêu Huyết áp:</text>
+    <text x="0" y="77" fill="#14532d" font-size="12">HATT 130 - 150 / HATTr 80 - 100 mmHg</text>
+
+    <text x="0" y="105" fill="#1e40af" font-size="12" font-weight="bold">Thuốc hạ áp cấp cứu (Tĩnh mạch/Uống):</text>
+    <text x="0" y="125" fill="#334155" font-size="11" font-weight="bold">• Labetalol IV:</text>
+    <text x="10" y="140" fill="#475569" font-size="11">Khởi đầu 20mg IV, lặp lại 40-80mg</text>
+    <text x="10" y="154" fill="#475569" font-size="11">mỗi 10 phút (Tối đa 300mg)</text>
+
+    <text x="0" y="178" fill="#334155" font-size="11" font-weight="bold">• Nifedipin uống tác dụng nhanh:</text>
+    <text x="10" y="193" fill="#475569" font-size="11">10-20mg uống, lặp lại sau 20’</text>
+
+    <text x="0" y="217" fill="#334155" font-size="11" font-weight="bold">• Hydralazine IV:</text>
+    <text x="10" y="232" fill="#475569" font-size="11">5-10mg IV chậm, lặp lại sau 20’</text>
+
+    <rect x="0" y="250" width="220" height="85" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+    <text x="110" y="268" fill="#991b1b" font-size="11" font-weight="bold" text-anchor="middle">CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI</text>
+    <text x="10" y="288" fill="#7f1d1d" font-size="11">• Thuốc ức chế men chuyển (ACEi)</text>
+    <text x="10" y="304" fill="#7f1d1d" font-size="11">• Thuốc chẹn thụ thể (ARB)</text>
+    <text x="10" y="320" fill="#7f1d1d" font-size="11">Trong suốt thai kỳ (gây dị tật/suy thận)</text>
+  </g>
+
+  <!-- Section 2: MgSO4 Seizure Prophylaxis -->
+  <rect x="280" y="70" width="240" height="390" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="280" y="70" width="240" height="35" rx="8" fill="#dcfce7"/>
+  <text x="400" y="93" fill="#15803d" font-size="14" font-weight="bold" text-anchor="middle">2. DỰ PHÒNG CO GIẬT (MgSO₄)</text>
+
+  <g transform="translate(290, 115)">
+    <text x="0" y="15" fill="#0f172a" font-size="12" font-weight="bold">Chỉ định:</text>
+    <text x="0" y="32" fill="#334155" font-size="11">Tiền sản giật có dấu hiệu nặng &amp; Sản giật</text>
+
+    <text x="0" y="58" fill="#166534" font-size="12" font-weight="bold">Phác đồ tiêm truyền (Zuspan):</text>
+    <text x="0" y="75" fill="#334155" font-size="11" font-weight="bold">• Liều tấn công (Loading):</text>
+    <text x="10" y="90" fill="#475569" font-size="11">4 - 6g MgSO₄ IV trong 15 - 20 phút</text>
+    <text x="0" y="110" fill="#334155" font-size="11" font-weight="bold">• Liều duy trì (Maintenance):</text>
+    <text x="10" y="125" fill="#475569" font-size="11">1 - 2g/giờ IV kéo dài ít nhất 24h sau sinh</text>
+
+    <rect x="0" y="145" width="220" height="120" rx="6" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="110" y="163" fill="#166534" font-size="11" font-weight="bold" text-anchor="middle">THEO DÕI NGỘ ĐỘC MAGNESIUM</text>
+    <text x="10" y="181" fill="#14532d" font-size="11">1. Phản xạ gân xương bánh chè: Còn</text>
+    <text x="10" y="197" fill="#14532d" font-size="11">2. Nhịp thở: ≥ 12 lần/phút</text>
+    <text x="10" y="213" fill="#14532d" font-size="11">3. Thể tích nước tiểu: ≥ 30 mL/giờ</text>
+    <text x="10" y="231" fill="#991b1b" font-size="11" font-weight="bold">Thuốc giải độc trực tiếp (Antidote):</text>
+    <text x="10" y="247" fill="#991b1b" font-size="11">Calcium Gluconate 10% (1g IV chậm)</text>
+  </g>
+
+  <!-- Section 3: Delivery Timing -->
+  <rect x="540" y="70" width="240" height="390" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="540" y="70" width="240" height="35" rx="8" fill="#fee2e2"/>
+  <text x="660" y="93" fill="#991b1b" font-size="14" font-weight="bold" text-anchor="middle">3. THỜI ĐIỂM CHẤM DỨT THAI KỲ</text>
+
+  <g transform="translate(550, 115)">
+    <text x="0" y="15" fill="#166534" font-size="12" font-weight="bold">Tuổi thai ≥ 37⁰/₇ tuần:</text>
+    <text x="0" y="32" fill="#334155" font-size="11">Chủ động chấm dứt thai kỳ cho tất cả ca TSG</text>
+
+    <text x="0" y="58" fill="#d97706" font-size="12" font-weight="bold">Tuổi thai 34⁰/₇ - 36⁶/₇ tuần:</text>
+    <text x="0" y="73" fill="#334155" font-size="11">• TSG nhẹ: Theo dõi bảo tồn đến 37w</text>
+    <text x="0" y="88" fill="#334155" font-size="11">• TSG có dấu hiệu nặng: Sinh sau ổn định</text>
+
+    <text x="0" y="114" fill="#991b1b" font-size="12" font-weight="bold">Tuổi thai &lt; 34⁰/₇ tuần (TSG nặng):</text>
+    <text x="0" y="129" fill="#334155" font-size="11">• Trì hoãn 24 - 48h tiêm đủ Corticosteroid</text>
+    <text x="0" y="143" fill="#475569" font-size="11">(Betamethasone 12mg x 2 liều bắp)</text>
+
+    <rect x="0" y="162" width="220" height="170" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+    <text x="110" y="180" fill="#991b1b" font-size="11" font-weight="bold" text-anchor="middle">CHẤM DỨT THAI KỲ BẮT BUỘC</text>
+    <text x="110" y="195" fill="#991b1b" font-size="11" font-weight="bold" text-anchor="middle">(KHÔNG TRÌ HOÃN):</text>
+    <text x="10" y="213" fill="#7f1d1d" font-size="11">• Huyết áp không kiểm soát</text>
+    <text x="10" y="228" fill="#7f1d1d" font-size="11">• Sản giật / Phù phổi / Mù vỏ não</text>
+    <text x="10" y="243" fill="#7f1d1d" font-size="11">• HELLP tiến triển / Suy thận cấp</text>
+    <text x="10" y="258" fill="#7f1d1d" font-size="11">• Rau bong non / Suy thai cấp</text>
+    <text x="10" y="273" fill="#7f1d1d" font-size="11">• Thai chết lưu trong tử cung</text>
+  </g>
+</svg>

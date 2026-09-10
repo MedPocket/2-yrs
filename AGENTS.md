@@ -107,4 +107,4 @@ End with `Summary: N errors, N warnings.`
 
 ## Content
 
-Please read and follow the detailed rules in [**STYLEGUIDE.md**](./STYLEGUIDE.md):
+Please read and follow the detailed rules in [**MedPocket/manual-of-style**](https://raw.githubusercontent.com/MedPocket/manual-of-style/refs/heads/main/SKILL.md):
