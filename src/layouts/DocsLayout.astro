@@ -243,8 +243,7 @@ const hasPagination = Astro.slots.has("pagination");
       aria-label="Site navigation"
     >
       <div data-mobile-sidebar-panel class="h-full w-(--nb-sidebar-width) max-w-[85vw] -translate-x-full overflow-y-auto bg-card shadow-lg transition-transform duration-250 ease-out group-data-[state=open]:translate-x-0 motion-reduce:transition-none">
-        <div class="sticky top-0 z-[1] flex items-center justify-between border-b border-border bg-card px-4 py-3">
-          <span class="font-semibold text-sm text-foreground">Navigation</span>
+        <div class="sticky top-0 z-[1] flex items-center justify-end border-b border-border bg-card px-4 py-3">
           <button data-close-sidebar class="flex items-center justify-center w-8 h-8 rounded-md text-muted-foreground hover:bg-accent hover:text-foreground transition-colors" aria-label="Close sidebar">
             <Icon name="ph:x" class="w-5 h-5" />
           </button>
