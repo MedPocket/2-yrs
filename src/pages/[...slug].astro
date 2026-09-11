@@ -67,7 +67,7 @@ const toc = tocOn && tocConfig !== false ? getTOC(headings, tocConfig) : false;
 // entry at `/<entry.id>/index.md`.
 const markdownPath =
   entry.id === "index" ? "/index.md" : `/${entry.id}/index.md`;
-const markdownUrl = withBase(markdownPath, import.meta.env.BASE_URL ?? "/");
+const markdownUrl = withBase(markdownPath, import.meta.env.BASE ?? "/");
 const socialImage = entry.data.socialImage ?? `/og/${entry.id}.png`;
 ---
 
