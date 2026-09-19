@@ -7,7 +7,7 @@
  * classes for a button-shaped element; `buttonIconSize` sizes a leading/
  * trailing icon for a given size.
  */
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 export type ButtonVariant =
   | "primary"
