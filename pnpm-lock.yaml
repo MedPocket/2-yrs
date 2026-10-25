@@ -167,8 +167,8 @@ importers:
   .:
     dependencies:
       '@cloudflare/nimbus-docs':
-        specifier: ^0.18.1
-        version: 0.18.1(@types/node@24.19.2)(astro@7.4.2(@types/node@24.19.2)(jiti@2.7.0)(yaml@2.9.1))(jiti@2.7.0)
+        specifier: ^0.19.0
+        version: 0.19.0(@resvg/resvg-js@2.6.2)(@types/node@24.19.2)(astro@7.4.2(@types/node@24.19.2)(jiti@2.7.0)(yaml@2.9.1))(jiti@2.7.0)(satori@0.63.2)
       '@fontsource-variable/inter':
         specifier: ^5.3.0
         version: 5.3.0
@@ -432,19 +432,26 @@ packages:
     resolution: {integrity: sha512-dlT1m5e/0yUL0kRNcQn7yGLVThkgbB0Ga/1AmfDDC/8ik6AIiSf2QLQO2zPYvefsHP0aFgxO93cVLCCfDp7kzQ==}
     engines: {node: '>= 20.12.0'}
 
-  '@cloudflare/nimbus-docs@0.18.1':
-    resolution: {integrity: sha512-le4ZOV+r3RAYx+k3XjwpnLPpfoxwjnQbavVe+31/mg++23SgQMVVuTTHcJpNPgk1yiAW+Doj+HOP6Nc0PbpRUQ==}
+  '@cloudflare/nimbus-docs@0.19.0':
+    resolution: {integrity: sha512-knD+bdFn9MtQ7SQIlZTWi3pk13wLdvMMENI6uX+2TX7kyPgr90DdqsL2UaKxg3T6O3FwYm27hkxBPSYNhWnU8w==}
     engines: {node: '>=22.12.0'}
     hasBin: true
     peerDependencies:
+      '@modelcontextprotocol/server': '>=2.3.0 <3.0.0'
       '@readme/httpsnippet': '>=10.0.0'
+      '@resvg/resvg-js': '>=2.6.2 <3.0.0'
       '@scalar/openapi-parser': '>=0.10.0 <1.0.0'
       astro: '>=7.2.6 <8.0.0'
       openapi-sampler: '>=1.5.0'
       react: '>=19.0.0'
       react-dom: '>=19.0.0'
+      satori: '>=0.26.0 <0.27.0'
     peerDependenciesMeta:
+      '@modelcontextprotocol/server':
+        optional: true
       '@readme/httpsnippet':
+        optional: true
+      '@resvg/resvg-js':
         optional: true
       '@scalar/openapi-parser':
         optional: true
@@ -453,6 +460,8 @@ packages:
       react:
         optional: true
       react-dom:
+        optional: true
+      satori:
         optional: true
 
   '@cyberalien/svg-utils@1.2.21':
@@ -3167,7 +3176,7 @@ snapshots:
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
-  '@cloudflare/nimbus-docs@0.18.1(@types/node@24.19.2)(astro@7.4.2(@types/node@24.19.2)(jiti@2.7.0)(yaml@2.9.1))(jiti@2.7.0)':
+  '@cloudflare/nimbus-docs@0.19.0(@resvg/resvg-js@2.6.2)(@types/node@24.19.2)(astro@7.4.2(@types/node@24.19.2)(jiti@2.7.0)(yaml@2.9.1))(jiti@2.7.0)(satori@0.63.2)':
     dependencies:
       '@astrojs/markdown-satteri': 0.4.5
       '@astrojs/mdx': 8.0.3(@astrojs/markdown-satteri@0.4.5)(astro@7.4.2(@types/node@24.19.2)(jiti@2.7.0)(yaml@2.9.1))
@@ -3214,6 +3223,9 @@ snapshots:
       vfile: 6.0.3
       vite: 8.3.5(@types/node@24.19.2)(jiti@2.7.0)(yaml@2.9.1)
       yaml: 2.9.1
+    optionalDependencies:
+      '@resvg/resvg-js': 2.6.2
+      satori: 0.63.2
     transitivePeerDependencies:
       - '@astrojs/markdown-remark'
       - '@types/node'
